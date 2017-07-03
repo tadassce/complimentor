@@ -8,6 +8,7 @@ GEM
       multi_xml (>= 0.5.2)
     multi_xml (0.6.0)
     mustermann (1.0.0)
+    puma (3.9.1)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -23,6 +24,7 @@ PLATFORMS
 
 DEPENDENCIES
   facebook-messenger
+  puma
   sinatra
 
 BUNDLED WITH
