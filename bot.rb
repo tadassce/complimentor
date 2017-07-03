@@ -20,7 +20,7 @@ Bot.on :message do |message|
 
   text =
     if thumbsup?(message)
-      '😘'
+      '<3'
     else
       responses.sample
     end
