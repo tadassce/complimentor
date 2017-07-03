@@ -10,7 +10,7 @@ responses = [
 ]
 
 def thumbsup?(message)
-  message.attachments[0]['payload']['sticker_id']
+  message.attachments[0]['payload']['sticker_id'] == 369239263222822
 rescue
   false
 end
@@ -25,5 +25,5 @@ Bot.on :message do |message|
       responses.sample
     end
 
-  message.reply(text: responses.sample)
+  message.reply(text: text)
 end
