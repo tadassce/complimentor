@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative 'lib/message'
+
+morning_greetings = [
+  'Have an amazing day!',
+  'Sports today? ;)',
+  'Rock this day!'
+]
+
+Complimentor::Message.new(to: :ts, text: morning_greetings.sample).deliver

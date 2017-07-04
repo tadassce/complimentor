@@ -1,3 +1,5 @@
+require 'facebook/messenger'
+
 module Complimentor
   CONTACTS = {
     fn: 1512307118808420,
