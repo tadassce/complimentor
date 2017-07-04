@@ -8,4 +8,4 @@ morning_greetings = [
   'Rock this day!'
 ]
 
-Complimentor::Message.new(to: :ts, text: morning_greetings.sample).deliver
+Complimentor::Message.new(to: :fn, text: morning_greetings.sample).deliver
