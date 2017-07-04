@@ -1,5 +1,13 @@
 module Complimentor
   class Response
+    GREETINGS = [
+      'Hey!',
+      'Hello :)',
+      '👋',
+      'Hi',
+      'Olá'
+    ]
+
     RESPONSES = [
       'You are beautiful',
       'Have a great day!',
@@ -14,9 +22,11 @@ module Complimentor
     end
 
     def text
-      return '<3' if thumbsup?
-
-      RESPONSES.sample
+      case
+      when thumbsup? then '<3'
+      when greeting? then GREETINGS.sample
+      else                RESPONSES.sample
+      end
     end
 
     private
@@ -27,6 +37,10 @@ module Complimentor
       message.attachments[0]['payload']['sticker_id'] == THUMBSUP_STICKER_ID
     rescue
       false
+    end
+
+    def greeting?
+      message.text =~ /(hi)|(hey)|(hello)|(good morning)|(good evening)|(hej)|(halo)|(hallo)|(ola)|(olá)/i
     end
   end
 end
