@@ -14,6 +14,11 @@ module Complimentor
       'You are great.',
     ]
 
+    THUMBSUP_RESPONSES = [
+      ':)', ';)', '✌️', '👍', '👑', '🌞', '❤️', '💛', '💚', '💙', '💜',
+      '🌝', '🌚', '💃'
+    ]
+
     attr_reader :message
 
     def initialize(message)
@@ -23,7 +28,7 @@ module Complimentor
 
     def text
       case
-      when thumbsup? then '<3'
+      when thumbsup? then THUMBSUP_RESPONSES.sample
       when greeting? then GREETINGS.sample
       else                RESPONSES.sample
       end
