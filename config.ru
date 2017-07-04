@@ -1,5 +1,5 @@
 require_relative 'app'
-require_relative 'bot'
+require_relative 'lib/bot'
 
 map('/') do
   run Sinatra::Application
