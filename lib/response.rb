@@ -5,7 +5,8 @@ module Complimentor
       'Hello :)',
       '👋',
       'Hi',
-      'Olá'
+      'Olá',
+      'Labas'
     ]
 
     RESPONSES = [
