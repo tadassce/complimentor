@@ -5,7 +5,15 @@ require_relative 'lib/message'
 morning_greetings = [
   'Have an amazing day!',
   'Sports today? ;)',
-  'Rock this day!'
+  'Rock this day!',
+  'You are beautiful',
+  'Have a great day!',
+  'You are great.',
+  'Have a happy day :)',
+  'Have a strong day!',
+  'You know you can do this',
+  'If you can dream it, you can do it.',
+  'Be a yardstick of quality. Some people aren’t used to an environment where excellence is expected.',
 ]
 
 Complimentor::Message.new(to: :fn, text: morning_greetings.sample).deliver
