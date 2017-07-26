@@ -10,12 +10,6 @@ module Complimentor
     ]
 
     RESPONSES = [
-      'You are beautiful',
-      'Have a great day!',
-      'You are great.',
-    ]
-
-    THUMBSUP_RESPONSES = [
       ':)', ';)', '✌️', '👍', '👑', '🌞', '❤️', '💛', '💚', '💙', '💜',
       '🌝', '🌚', '💃'
     ]
@@ -29,7 +23,7 @@ module Complimentor
 
     def text
       case
-      when thumbsup? then THUMBSUP_RESPONSES.sample
+      # when thumbsup? then RESPONSES.sample
       when greeting? then GREETINGS.sample
       else                RESPONSES.sample
       end
